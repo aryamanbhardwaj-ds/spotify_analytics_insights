@@ -1,72 +1,44 @@
+Spotify Data Analytics Dashboard
 📌 Project Overview
-This project transforms raw Spotify streaming data into a comprehensive analytical tool using Power BI. The dashboard provides a deep dive into music consumption patterns, artist performance metrics, and track attributes. By leveraging data visualization, it identifies high-growth genres and the characteristics of top-charting music to assist record labels and artists in making data-driven decisions.
+This repository contains a professional Spotify Analytics Dashboard built using Power BI. The project aims to analyze music streaming trends, track popularity, and artist performance. By transforming raw streaming data into interactive visuals, this dashboard identifies the key "success factors" that drive songs to the top of the charts.
 
-🚀 Key Features & Insights
+📊 Dashboard Preview
+Note: Place a screenshot of your dashboard here to grab the recruiter's attention! ![Dashboard Screenshot](link_to_your_image.png)
 
-Artist Performance KPIs: Dynamic tracking of artist popularity, follower growth, and total streams over specific time periods.
-+1
+🛠️ Technical Implementation
+Since this is a standalone Power BI project, the core technical work resides within Power Query and DAX.
 
+1. Data Cleaning & ETL (Power Query)
+Data Normalization: Cleaned and structured raw Spotify datasets, ensuring consistency across track names, artist IDs, and release dates.
 
-Track Attribute Analysis: Analyzes the correlation between musical features (Danceability, Energy, Liveness) and overall track popularity.
+Feature Engineering: Extracted time-based columns (Year, Month, Quarter) to enable time-series analysis.
 
+Data Integrity: Handled missing values in popularity scores and streaming counts to prevent skewed visualizations.
 
-Trending Metrics: A dedicated section for identifying real-time trending tracks and breakout artists.
-+1
+2. Data Modeling
+Implemented a Schema approach to connect track metadata with streaming metrics.
 
+Established one-to-many relationships between the Artist table and the Tracks table for seamless cross-filtering.
 
-Genre Deep-Dive: Visualization of streaming volume across different genres to pinpoint market shifts.
+3. DAX & Analytical Measures
+I authored several custom DAX measures to move beyond basic data reporting. Key calculations include:
 
+Total Streams & Reach: Aggregated volume across regions.
 
-Interactive UX: A "Music Player" themed interface using Power BI bookmarks and selection panes for a seamless user experience.
-+1
+Average Popularity Score: A dynamic metric reacting to user-selected filters.
 
-🛠️ Technical Workflow
-1. Data Transformation (Power Query)
-Performed ETL (Extract, Transform, Load) to clean raw datasets.
+Time-Intelligence: Comparison of performance across different release years and months.
 
-Handled null values, standardized date formats, and normalized artist/track metadata for consistency.
+💡 Business Insights
+Genre Dominance: Identified which genres are currently leading in streaming volume and listener retention.
 
-Restructured data into a Star Schema for optimized query performance.
+Audio Characteristics: Analyzed how attributes like 'Danceability' and 'Energy' correlate with a track's likelihood of becoming a hit.
 
-2. Analytical Modeling (DAX)
-Authoring custom Data Analysis Expressions (DAX) to create advanced metrics, including:
+Artist Growth: Visualized the trajectory of artists to identify "Rising Stars" versus established icons.
 
-Total Streams: SUM(Streaming_Data[Streams])
+📂 How to Use This Repo
+Download: Clone this repository or download the .pbix file.
 
+View: Open Spotify Dashboard Creation Project.pbix using Power BI Desktop.
 
-Popularity Ranking: Dynamic ranking of tracks based on a weighted score of streams and energy.
-
-Year-over-Year Growth: Time intelligence functions to track artist growth trends.
-
-3. Visual Storytelling
-Utilized Slicers for dynamic filtering by Genre, Artist, and Release Year.
-+1
-
-Implemented Custom Visuals and custom icons to match the Spotify brand aesthetic.
-
-Used Cross-filtering to allow users to click an artist and see their entire performance history across the dashboard.
-
-📈 Impact for Business
-This dashboard serves as a strategic asset for:
-
-Music Producers: To understand which track characteristics (e.g., higher energy) are currently resonating with listeners.
-
-Marketing Teams: To allocate resources toward genres showing high streaming momentum.
-
-Talent Scouts: To identify "Rising Star" artists through growth-rate metrics.
-
-🛠️ Tech Stack
-
-Tool: Power BI Desktop 
-
-
-Languages: DAX, Power Query (M) 
-
-
-Design: Custom Registration Resources for UI elements 
-
-Author: [Aryaman Bhardwaj]
-
-LinkedIn: [Your Profile Link]
-
-Portfolio: [Your Portfolio Link]
+Interact: Use the slicers on the left/top to filter by Year, Genre, or Artist to see the data update in real-time.
